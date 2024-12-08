@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nav li a.active{
+    background-color: #9333EA !important;
+    color: white !important;
+    border-radius: 5px !important;
+}

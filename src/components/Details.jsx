@@ -4,25 +4,14 @@ import { AuthContext } from "./AuthProvider";
 import Swal from 'sweetalert2'
 
 const Details = () => {
-    const currentDate = new Date().getDate();
     const details = useLoaderData();
     const { user } = useContext(AuthContext)
     const displayName = user.displayName;
     const email = user.email
-    const { title, image, description, status, category, date } = details;
-    const expireDate = date.split('/')[0];
+    const { title, image, description, status, category } = details;
 
     const handleDonate = () => {
         const donatedUser = { title, image, description, status, category, displayName, email }
-        if (currentDate > expireDate) {
-            return Swal.fire({
-                position: "top-center",
-                icon: "warning",
-                title: "Date Expired",
-                showConfirmButton: false,
-                timer: 2000
-            })
-        }
         fetch('https://crowd-funding-rouge.vercel.app/donated-campaign', {
             method: "POST",
             headers: {

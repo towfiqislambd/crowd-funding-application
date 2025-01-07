@@ -15,9 +15,9 @@ const ThemeController = () => {
     return (
         <div className="theme-toggle" onClick={toggleTheme} style={{ cursor: "pointer" }}>
             {theme === 'light' ? (
-                <FiSun className='text-2xl text-white md:text-3xl' />
+                <FiSun className='text-white text-3xl' />
             ) : (
-                <IoMoonOutline className='text-2xl text-white md:text-3xl' />
+                <IoMoonOutline className='text-white text-3xl' />
 
             )}
         </div>

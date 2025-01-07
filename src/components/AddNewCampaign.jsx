@@ -43,8 +43,8 @@ const AddNewCampaign = () => {
 
     return (
         <div className="container mx-auto px-5 sm:px-10 mt-28 mb-10">
-            <div className="bg-purple-50 mx-auto shadow-xl border border-purple-100 rounded-lg my-8 max-w-3xl">
-                <form onSubmit={handleNewCampaign} className="p-4 sm:p-8 space-y-3 sm:space-y-5 bg-gray-200 border">
+            <div className="bg-[rgba(0,0,0,0.15)] mx-auto shadow-xl border rounded-lg my-8 max-w-3xl">
+                <form onSubmit={handleNewCampaign} className="p-4 sm:p-8 space-y-3 sm:space-y-5 border">
                     <h3 className="text-2xl sm:text-3xl font-bold text-purple-600 text-center">Add New Campaign</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                         <input
@@ -101,7 +101,7 @@ const AddNewCampaign = () => {
                     />
                     <textarea name="desc" rows={5} className="textarea w-full border-gray-300 rounded-md shadow-sm focus:border-purple-400 focus:ring focus:ring-purple-200 transition"
                         placeholder="Description" required></textarea>
-                    <button type="submit" className="btn w-full bg-purple-600 hover:bg-purple-700 text-white rounded-md py-2 shadow-md transition">Add Campaign</button>
+                    <button type="submit" className="btn w-full border-none bg-purple-600 hover:bg-purple-700 text-white rounded-md py-2 shadow-md transition">Add Campaign</button>
                 </form>
             </div>
         </div>

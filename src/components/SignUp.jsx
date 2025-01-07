@@ -51,14 +51,14 @@ const SignUp = () => {
 
     }
     return (
-        <div className="container mx-auto px-5  mb-16 mt-28 grid grid-cols-1 lg:grid-cols-2 gap-10">
-             <div className="order-0 md:order-1">
-                <Lottie animationData={registrationAnimation} className="w-full lg:w-3/5" loop={true} />
+        <div className="container mx-auto px-5  mb-16 mt-32 grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div className="order-0 md:order-1">
+                <Lottie animationData={registrationAnimation} className="w-full lg:w-3/4" loop={true} />
             </div>
-            <div className="bg-purple-100 mx-auto shadow-lg border-purple-200 border rounded-lg max-w-[26rem]">
+            <div className="bg-[rgba(0,0,0,0.15)] mx-auto shadow-lg border rounded-lg max-w-[26rem]">
                 <form onSubmit={handleRegister} className="px-8 p-5 pb-3 ">
                     <div className="space-y-4">
-                        <h3 className="text-2xl  font-semibold text-gray-700 text-center">Registration</h3>
+                        <h3 className="text-2xl font-semibold text-purple-700 text-center">Register Here...</h3>
                         <input type="text" name="name" placeholder="Your Name" className="input w-full input-bordered border-purple-200 rounded" required />
                         <input type="email" name="email" placeholder="Email Address" className="input w-full input-bordered border-purple-200 rounded" required />
                         <input type="text" name="photo" placeholder="Photo URL" className="input w-full input-bordered border-purple-200 rounded" required />

@@ -1,12 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body{
+    font-family: "Roboto", serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Josefin Sans", serif;
+}
 nav li a:focus{
     background-color: transparent !important;
     color: white !important;
 }
 nav li a.active{
-    background-color: #9333EA !important;
+    background-color: #721ac5  !important;
     color: white !important;
     border-radius: 5px !important;
 }

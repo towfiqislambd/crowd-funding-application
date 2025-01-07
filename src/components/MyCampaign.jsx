@@ -83,7 +83,7 @@ const MyCampaign = () => {
                                         {campaign.campaign_type}
                                     </td>
                                     <td className="py-3 px-4 text-sm sm:text-base border border-gray-300">
-                                        {campaign.number}
+                                        ${campaign.number}
                                     </td>
                                     <td className="py-3 px-4 text-sm sm:text-base border border-gray-300">
                                         {campaign.date}

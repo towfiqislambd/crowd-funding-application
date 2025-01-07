@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+nav li a:focus{
+    background-color: transparent !important;
+    color: white !important;
+}
+nav li a.active{
+    background-color: #9333EA !important;
+    color: white !important;
+    border-radius: 5px !important;
+}
+
+.sticky-navbar-nav{
+    padding:  0 !important;
+}

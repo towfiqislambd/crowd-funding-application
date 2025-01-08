@@ -45,7 +45,7 @@ const Navbar = () => {
                         <Link to="/"><img src={logo} className="md:w-14 w-10" /></Link>
                     </div>
                     <div className="navbar-center hidden lg:flex">
-                        <ul className="menu menu-horizontal px-1 gap-7 text-[0.92rem] font-medium text-white">
+                        <ul className={`menu menu-horizontal px-1 text-[0.92rem] font-medium text-white ${user ? 'lg:gap-2 xl:gap-7' : 'gap-7'}`}>
                             <li><NavLink to='/'>Home</NavLink></li>
                             <li><NavLink to='/all-campaign'>All Campaigns</NavLink></li>
                             {
@@ -70,7 +70,7 @@ const Navbar = () => {
                                         {user?.displayName}
                                     </Tooltip>
                                     <img src={user?.photoURL} className="w-10 my-anchor-element h-10 rounded-full" />
-                                    <Link onClick={handleSignOut} className={`px-3 sm:px-4 sm:py-2 py-[6px] rounded font-medium bg-[#721ac5] text-white`}>Log Out</Link>
+                                    <Link onClick={handleSignOut} className={`px-3 sm:py-2 py-[6px] rounded font-medium bg-[#721ac5] text-white`}>Log Out</Link>
                                     {
                                         location.pathname === '/' && <ThemeController />
                                     }

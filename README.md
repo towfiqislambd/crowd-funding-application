@@ -87,5 +87,5 @@ And Run `nodemon index.js` to run the server locally.
 ## 19. At A Glance:
 
 <div align="center">
-  <img src="https://github.com/towfiqislambd/bistro-boss-restaurant/blob/main/src/assets/bistro-boss-full.png"  />
+  <img src="https://github.com/towfiqislambd/crowd-funding-application/blob/main/src/assets/full_project.png"  />
 </div>

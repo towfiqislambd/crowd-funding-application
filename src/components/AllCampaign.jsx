@@ -14,7 +14,7 @@ const AllCampaign = () => {
                     toast: true,
                     position: "top-end",
                     showConfirmButton: false,
-                    timer: 1000,
+                    timer: 1500,
                     timerProgressBar: true,
                     didOpen: (toast) => {
                         toast.onmouseenter = Swal.stopTimer;
@@ -31,9 +31,9 @@ const AllCampaign = () => {
 
     return (
         <div className="container mx-auto px-5 mb-16 mt-28">
-            <div className="flex flex-col sm:flex-row gap-3 justify-between items-center mb-5">
+            <div className="flex flex-col sm:flex-row gap-3 justify-between items-center mb-7">
                 <p className="md:text-3xl text-2xl font-bold text-purple-700">All Campaign List</p>
-                <button onClick={handleSort} className="bg-purple-700 text-sm text-white rounded shadow-md hover:bg-purple-800 transition-all w-[180px] font-medium sm:w-48 sm:h-10 h-8">Sort By Donation Amount
+                <button onClick={handleSort} className="bg-purple-700 text-sm text-white rounded shadow-md hover:bg-purple-800 transition-all w-[200px] font-medium sm:w-52 sm:h-10 h-8">Sort By Max Donation Amount
                 </button>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 xl:gap-7">
@@ -42,7 +42,6 @@ const AllCampaign = () => {
                 }
             </div>
         </div>
-
     )
 }
 

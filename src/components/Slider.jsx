@@ -61,7 +61,7 @@ const Slider = () => {
                         <span style={{ color: 'rgb(147 51 234)' }}>for charity humanity and trustworthy</span>
                     </h1>
                     <p className="text-gray-200 pb-2 md:pb-4 md:w-4/5 mx-auto">
-                        There are many people which includes homeless, disaster victims, underprivileged and children in need of clothing. We cannot do so much for them but if our one set of clothes covers naked body of one person that will be more than enough. Because when we do good things for others, it makes us feel good and happy and good things come to us also.
+                        Countless individuals, including the homeless, disaster survivors, underprivileged, and children, lack proper clothing. While we may not be able to change their world entirely, providing just one set of clothes to someone in need can make a significant difference. A single act of kindness, like covering someone bare body, holds immense value.
                     </p>
                     <Link to='/all-campaign' className="bg-purple-600 flex items-center gap-2 transition-all hover:bg-transparent border border-purple-600 hover:text-purple-600 text-white px-5 py-2 rounded font-medium">
                         <span>See All Campaign</span>

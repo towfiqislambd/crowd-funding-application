@@ -3,6 +3,7 @@ import RunningCampaign from "./RunningCampaign";
 import About from "./About";
 import Target from "./Target";
 import Slider from "./Slider";
+import Testimonial from "./Testimonial";
 
 const Home = () => {
     const campaigns = useLoaderData();
@@ -11,6 +12,7 @@ const Home = () => {
             <Slider></Slider>
             <About></About>
             <RunningCampaign campaigns={campaigns}></RunningCampaign>
+            <Testimonial></Testimonial>
             <Target></Target>
         </div>
     )

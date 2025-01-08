@@ -37,7 +37,7 @@ const Footer = () => {
                     </form>
                 </div>
                 <hr className="my-5" />
-                <p className="text-center text-gray-400">@copyright 2025. All Rights Reserved By <a href="https://www.facebook.com/towfiqislambd" className="text-amber-400 font-mono font-medium hover:underline" target="_blank">Towfiq Islam</a></p>
+                <p className="text-base text-center text-gray-400">@copyright 2025. All Rights Reserved By <a href="https://www.facebook.com/towfiqislambd" className="text-amber-400 font-mono font-medium hover:underline" target="_blank">Towfiq Islam</a></p>
             </div>
         </footer>
     )

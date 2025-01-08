@@ -1,8 +1,10 @@
 import { useContext, useState } from 'react'
 import Swal from 'sweetalert2'
 import { AuthContext } from "./AuthProvider";
+import { useNavigate } from 'react-router-dom';
 
 const AddNewCampaign = () => {
+    const navigate = useNavigate()
     const { user } = useContext(AuthContext);
     const [dates, setDates] = useState(null)
     const [option, setOption] = useState(null)
@@ -37,6 +39,7 @@ const AddNewCampaign = () => {
                         showConfirmButton: false,
                         timer: 2000
                     });
+                    navigate('/all-campaign')
                 }
             })
     }
@@ -48,7 +51,7 @@ const AddNewCampaign = () => {
                     <h3 className="text-2xl sm:text-3xl font-bold text-purple-600 text-center">Add New Campaign</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                         <input
-                            type="text"
+                            type="url"
                             name="image"
                             placeholder="Image URL"
                             className="input bg-white w-full input-bordered border-gray-300 rounded-md shadow-sm focus:border-purple-400 focus:ring focus:ring-purple-200 transition"
@@ -64,10 +67,10 @@ const AddNewCampaign = () => {
                         <select defaultValue='defOption' onChange={(e) => setOption(e.target.value)} className="select bg-white w-full border-gray-300 rounded-md shadow-sm focus:border-purple-400 focus:ring focus:ring-purple-200 text-gray-400 transition"
                             required >
                             <option value='defOption' disabled>Campaign Type</option>
-                            <option value='personal-issue'>Personal Issue</option>
-                            <option value='startup'>Startup</option>
-                            <option value='business'>Business</option>
-                            <option value='creative-ideas'>Creative Ideas</option>
+                            <option value='Personal Issue'>Personal Issue</option>
+                            <option value='Startup'>Startup</option>
+                            <option value='Business'>Business</option>
+                            <option value='Creative Ideas'>Creative Ideas</option>
                         </select>
                         <input
                             type="text"

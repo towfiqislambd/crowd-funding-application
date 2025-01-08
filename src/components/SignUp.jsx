@@ -1,11 +1,12 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 import Swal from 'sweetalert2'
 import Lottie from "lottie-react";
 import registrationAnimation from "../assets/register.json";
 
 const SignUp = () => {
+    const navigate = useNavigate()
     const [errorMessage, setErrorMessage] = useState('');
     const { singUpUser, updateUserProfile, setUser } = useContext(AuthContext)
     const handleRegister = e => {
@@ -43,6 +44,7 @@ const SignUp = () => {
                     icon: "success",
                     title: "Registration successful"
                 })
+                navigate(location?.state && location.state || '/')
             })
             .catch(error => {
                 const errorMsg = error.message;
@@ -51,7 +53,7 @@ const SignUp = () => {
 
     }
     return (
-        <div className="container mx-auto px-5  mb-16 mt-32 grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="container mx-auto px-5  mb-16 mt-32 grid grid-cols-1 items-center md:grid-cols-2 gap-10">
             <div className="order-0 md:order-1">
                 <Lottie animationData={registrationAnimation} className="w-full lg:w-3/4" loop={true} />
             </div>

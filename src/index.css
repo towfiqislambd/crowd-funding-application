@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 body{
     font-family: "Roboto", serif;
 }
@@ -16,7 +17,6 @@ nav li a.active{
     color: white !important;
     border-radius: 5px !important;
 }
-
 .sticky-navbar-nav{
     padding:  0 !important;
 }

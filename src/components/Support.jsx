@@ -24,7 +24,7 @@ const Support = () => {
                 <div className="collapse collapse-arrow border bg-gray-300 rounded-lg shadow-lg transition-transform hover:scale-105">
                     <input type="radio" name="my-accordion-3" />
                     <div className="collapse-title text-xl font-semibold text-gray-700">
-                        2. Assignment Deadline?
+                        2. About Our Policy?
                     </div>
                     <div className="collapse-content">
                         <p className="text-gray-700 dark:text-gray-800">Setting academic goals and achieving them is much easier when you have a group of motivated peers to support you. Online group study encourages accountability, making it easier to stay on track with deadlines and progress.</p>
@@ -33,7 +33,7 @@ const Support = () => {
                 <div className="collapse collapse-arrow border bg-gray-300 rounded-lg shadow-lg transition-transform hover:scale-105">
                     <input type="radio" name="my-accordion-3" />
                     <div className="collapse-title text-xl font-semibold text-gray-700">
-                        3. How to purchase premium plan?
+                        3. How to Fund in premium plan?
                     </div>
                     <div className="collapse-content">
                         <p className="text-gray-700 dark:text-gray-800">

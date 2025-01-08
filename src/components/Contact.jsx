@@ -2,8 +2,39 @@ import { MdEmail } from "react-icons/md";
 import { TbWorldCheck } from "react-icons/tb";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneVolume } from "react-icons/fa6";
+import Swal from "sweetalert2";
 
 const Contact = () => {
+    const handleSubmit = e => {
+        e.preventDefault();
+        const formData = {
+            "Full Name": e.target.name.value,
+            Email: e.target.email.value,
+            "Phone Number": e.target.phone.value,
+            Message: e.target.message.value
+        }
+        fetch('https://formspree.io/f/xlddongn', {
+            method: "POST",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.ok === true) {
+                    Swal.fire({
+                        position: "top-center",
+                        icon: "success",
+                        title: "Your data has been recorded",
+                        showConfirmButton: false,
+                        timer: 2000
+                    })
+                    e.target.reset()
+                }
+            })
+    }
     return (
         <section id="contact" className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center pb-16 pt-28 container mx-auto px-5">
             <div className="">
@@ -17,7 +48,7 @@ const Contact = () => {
                 </div>
             </div>
             <div className="">
-                <form action='#' className="border space-y-4 p-5 lg:px-9 lg:py-7 rounded bg-[rgba(0,0,0,0.1)]">
+                <form onSubmit={handleSubmit} className="border space-y-4 p-5 lg:px-9 lg:py-7 rounded bg-[rgba(0,0,0,0.1)]">
                     <h3 className="text-center text-3xl text-gray-700 font-bold mb-2">Get In Touch</h3>
                     <input name="name" type="text" className="input rounded input-bordered w-full" placeholder="Full Name*" required />
                     <input name="email" type="email" className="input rounded input-bordered w-full" placeholder="Email*" required />

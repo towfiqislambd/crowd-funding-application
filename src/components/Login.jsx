@@ -34,7 +34,7 @@ const Login = () => {
                     icon: "success",
                     title: "Logged In successfully"
                 });
-                navigate(location?.state && location.state)
+                navigate(location?.state && location.state || '/')
             })
             .catch(error => {
                 const errorMsg = error.message;
@@ -45,13 +45,13 @@ const Login = () => {
     const handleGoogleSignIn = () => {
         signinWithGoogle()
             .then(() => {
-                navigate(location?.state && location.state)
+                navigate(location?.state && location.state || '/')
             })
     }
     return (
-        <div className="container mx-auto px-5  mb-14 mt-32 grid grid-cols-1 lg:grid-cols-2 gap-10">
-            <div className="order-0 md:order-1">
-                <Lottie animationData={loginAnimation} className="w-full lg:w-3/5" loop={true} />
+        <div className="container mx-auto px-5  mb-14 mt-32 grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="order-0 lg:order-1">
+                <Lottie animationData={loginAnimation} className="w-full md:4/5 lg:w-3/5" loop={true} />
             </div>
             <div className="bg-[rgba(0,0,0,0.15)] mx-auto shadow-lg border-purple-200 border rounded-lg max-w-[25rem]">
                 <form onSubmit={handleSignIn} className="px-8 pt-6 mb-5 ">
@@ -63,7 +63,7 @@ const Login = () => {
                     </div>
                     <p className="text-gray-700 text-center pt-3 pb-4">Dont have any account? <Link to="/signup" className="link link-hover text-purple-600 font-semibold">Register</Link></p>
                     <div className="divider divide-slate-700 -mt-2 text-gray-700 font-medium">or</div>
-                    <Link onClick={handleGoogleSignIn} className="items-center text-center gap-1 sm:gap-2 flex -mt-2 border border-purple-400 text-sm sm:text-[16px] rounded-full py-[8px] mx-auto font-medium  bg-purple-300 justify-center w-3/5"><FcGoogle className="text-xl sm:text-2xl" /> Signin With Google</Link>
+                    <Link onClick={handleGoogleSignIn} className="items-center text-center gap-1 sm:gap-2 flex -mt-2 border border-purple-400 text-sm md:text-[16px] rounded-full py-[8px] mx-auto font-medium  bg-purple-300 justify-center w-4/5 lg:w-3/5"><FcGoogle className="text-xl sm:text-2xl" /> Signin With Google</Link>
                 </form>
                 {
                     errorMessage && <h3 className="text-center px-7 pb-4 text-error -mt-1">{errorMessage}</h3>

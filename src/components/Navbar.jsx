@@ -1,5 +1,5 @@
 import { FaBars } from "react-icons/fa6";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "./AuthProvider";
 import { Tooltip } from 'react-tooltip';
@@ -11,6 +11,11 @@ import 'react-tooltip/dist/react-tooltip.css';
 const Navbar = () => {
     const { user, signOutUser } = useContext(AuthContext)
     const location = useLocation();
+    const navigate = useNavigate();
+    const handleSignOut = () => {
+        signOutUser()
+        navigate('/')
+    }
     return (
         <StickyNavbar showOnScrollDown={true} showOnScrollUp={true} stickyBackground={'#9333EA'}>
             <div className={`w-full sticky top-0 z-50 text-white ${location.pathname !== '/' && 'bg-[#9333EA]'}`}>
@@ -65,7 +70,7 @@ const Navbar = () => {
                                         {user?.displayName}
                                     </Tooltip>
                                     <img src={user?.photoURL} className="w-10 my-anchor-element h-10 rounded-full" />
-                                    <Link onClick={signOutUser} className={`px-3 sm:px-4 sm:py-2 py-[6px] rounded font-medium bg-[#721ac5] text-white`}>Log Out</Link>
+                                    <Link onClick={handleSignOut} className={`px-3 sm:px-4 sm:py-2 py-[6px] rounded font-medium bg-[#721ac5] text-white`}>Log Out</Link>
                                     {
                                         location.pathname === '/' && <ThemeController />
                                     }

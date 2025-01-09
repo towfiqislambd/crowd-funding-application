@@ -17,7 +17,7 @@ const MyDonations = () => {
         <div className="container mx-auto px-5 mt-28 mb-10">
             {
                 donatedUsers.length === 0 ?
-                    <h2 className="text-center text-3xl text-error font-semibold">You did not donate yet!!</h2> :
+                    <h2 className="text-center h-[65vh] text-3xl text-error font-semibold">You did not donate yet!!</h2> :
                     donatedUsers.map(donatedUser => <Donation key={donatedUser._id} donatedUser={donatedUser}></Donation>)
             }
         </div>

@@ -20,3 +20,26 @@ nav li a.active{
 .sticky-navbar-nav{
     padding:  0 !important;
 }
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-button-prev:hover,
+.swiper-button-next:hover,
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+    color: #fff !important;
+}
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+    background-color: #fff !important;
+}
+
+@media screen and (max-width:640px) {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none !important;
+    }
+    .swiper_slider{
+        padding: 40px 0 !important;
+    }
+}

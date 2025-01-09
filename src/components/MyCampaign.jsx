@@ -2,8 +2,9 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "./AuthProvider";
 import { MdEdit } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
-import Swal from 'sweetalert2';
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2';
+
 
 const MyCampaign = () => {
     const { user } = useContext(AuthContext);
@@ -48,7 +49,7 @@ const MyCampaign = () => {
     return (
         <div className="container mx-auto px-5 xl:px-28 mt-28 mb-10">
             {campaigns.length === 0 ? (
-                <h2 className="text-center text-3xl text-red-500 font-semibold">You did not add any campaign!!</h2>
+                <h2 className="text-center text-3xl h-[65vh] text-red-500 font-semibold">You did not add any campaign!!</h2>
             ) : (
                 <div className="overflow-x-auto border-2 rounded-lg shadow-lg border-gray-400">
                     <table className="table-auto w-full border-collapse border-spacing-0">

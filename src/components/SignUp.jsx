@@ -4,11 +4,12 @@ import { AuthContext } from "./AuthProvider";
 import Swal from 'sweetalert2'
 import Lottie from "lottie-react";
 import registrationAnimation from "../assets/register.json";
+import { FcGoogle } from "react-icons/fc";
 
 const SignUp = () => {
     const navigate = useNavigate()
     const [errorMessage, setErrorMessage] = useState('');
-    const { singUpUser, updateUserProfile, setUser } = useContext(AuthContext)
+    const { singUpUser, updateUserProfile, setUser, signinWithGoogle } = useContext(AuthContext)
     const handleRegister = e => {
         e.preventDefault();
         const name = e.target.name.value;
@@ -52,6 +53,12 @@ const SignUp = () => {
             })
 
     }
+    const handleGoogleSignIn = () => {
+        signinWithGoogle()
+            .then(() => {
+                navigate(location?.state && location.state || '/')
+            })
+    }
     return (
         <div className="container mx-auto px-5  mb-16 mt-32 grid grid-cols-1 items-center md:grid-cols-2 gap-10">
             <div className="order-0 md:order-1">
@@ -68,9 +75,11 @@ const SignUp = () => {
                         <input type="submit" value='Register' className="btn bg-purple-600 hover:bg-purple-600 w-full text-white" />
                     </div>
                     <p className="text-gray-700 text-center pt-3 pb-3">Already have an account? <Link to="/login" className="link link-hover text-purple-600 font-semibold">Login</Link></p>
+                    <div className="divider divide-slate-700 -mt-2 text-gray-700 font-medium">or</div>
+                    <Link onClick={handleGoogleSignIn} className="items-center text-center gap-1 sm:gap-2 flex -mt-2 border border-purple-400 text-sm md:text-[16px] rounded-full py-[8px] mx-auto font-medium  bg-purple-300 justify-center w-4/5 lg:w-3/5"><FcGoogle className="text-xl sm:text-2xl" /> Signin With Google</Link>
                 </form>
                 {
-                    errorMessage && <h3 className="text-center px-7 pb-4 text-error -mt-4">{errorMessage}</h3>
+                    errorMessage && <h3 className="text-center px-7 pb-4 text-error">{errorMessage}</h3>
                 }
             </div>
         </div>

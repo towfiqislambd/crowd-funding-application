@@ -80,11 +80,11 @@ Create a `.env` file and put your environment variable there. Save the following
 
 ## 9. Usage:
 
-Run `npm run dev` to run the project locally.
+Run `npm run dev` to run the project locally.</br>
 And Run `nodemon index.js` to run the server locally.
 
 
-## 19. At A Glance:
+## 10. At A Glance:
 
 <div align="center">
   <img src="https://github.com/towfiqislambd/crowd-funding-application/blob/main/src/assets/full_project.png"  />
